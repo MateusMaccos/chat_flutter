@@ -4,7 +4,7 @@ enum AuthMode { Signup, Login }
 
 class AuthFormData {
   String name = '';
-  String eamil = '';
+  String email = '';
   String password = '';
   File? image;
   AuthMode _mode = AuthMode.Login;
