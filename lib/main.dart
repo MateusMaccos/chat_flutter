@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_chat/pages/auth_or_app_page.dart';
 import 'package:projeto_chat/pages/auth_page.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const AuthPage(),
+      home: const AuthOrAppPage(),
       debugShowCheckedModeBanner: false,
     );
   }
