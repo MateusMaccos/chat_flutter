@@ -34,11 +34,24 @@ class _UserImagePickerState extends State<UserImagePicker> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CircleAvatar(
-          radius: 40,
-          backgroundColor: Colors.grey,
-          backgroundImage: _image != null ? FileImage(_image!) : null,
-        ),
+        _image != null
+            ? CircleAvatar(
+                radius: 40,
+                backgroundColor: Colors.grey,
+                backgroundImage: _image != null ? FileImage(_image!) : null,
+              )
+            : ClipRRect(
+                borderRadius: BorderRadius.circular(40),
+                child: Container(
+                  height: 80,
+                  width: 80,
+                  color: Theme.of(context).primaryColor.withAlpha(50),
+                  child: Icon(
+                    Icons.camera_alt,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                ),
+              ),
         TextButton(
           onPressed: _pickImage,
           child: Row(
