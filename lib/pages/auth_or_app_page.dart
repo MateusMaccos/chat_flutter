@@ -7,6 +7,7 @@ import 'package:projeto_chat/pages/chat_page.dart';
 import 'package:projeto_chat/pages/loading_page.dart';
 import 'package:provider/provider.dart';
 import '../core/services/auth/auth_service.dart';
+import 'login_or_signup.dart';
 
 class AuthOrAppPage extends StatelessWidget {
   const AuthOrAppPage({super.key});
@@ -33,7 +34,9 @@ class AuthOrAppPage extends StatelessWidget {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return const LoadingPage();
                 } else {
-                  return snapshot.hasData ? const ChatPage() : const AuthPage();
+                  return snapshot.hasData
+                      ? const ChatPage()
+                      : const LoginOrSignUp();
                 }
               },
             );
