@@ -27,15 +27,18 @@ class _NewMessagesState extends State<NewMessages> {
     return Row(
       children: [
         Expanded(
-          child: TextField(
-            controller: _messageController,
-            onChanged: (msg) => setState(() => _message = msg),
-            decoration: InputDecoration(labelText: 'Enviar Mensagem'),
-            onSubmitted: (_) {
-              if (_message.trim().isNotEmpty) {
-                _sendMessage();
-              }
-            },
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: TextField(
+              controller: _messageController,
+              onChanged: (msg) => setState(() => _message = msg),
+              decoration: const InputDecoration(labelText: 'Enviar Mensagem'),
+              onSubmitted: (_) {
+                if (_message.trim().isNotEmpty) {
+                  _sendMessage();
+                }
+              },
+            ),
           ),
         ),
         IconButton(

@@ -16,6 +16,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
   final _formData = AuthFormData();
+  bool _enableObscure = true;
 
   void _showError(String msg) {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -32,6 +33,7 @@ class _LoginPageState extends State<LoginPage> {
       return _showError('Imagem não selecionada!');
     }
     widget.onSubmit(_formData);
+    Navigator.of(context).pop();
   }
 
   @override
@@ -106,30 +108,44 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     CustomTextField(
-                      child: TextFormField(
-                        key: const ValueKey('password'),
-                        initialValue: _formData.password,
-                        onChanged: (password) => _formData.password = password,
-                        validator: (_password) {
-                          final password = _password ?? '';
-                          if (password.length < 6) {
-                            return 'Senha deve ter no mínimo 6 caracteres.';
-                          }
-                          return null;
-                        },
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          icon: Icon(
-                            Icons.lock,
-                            color: Theme.of(context).primaryColor,
+                      child: Stack(
+                        children: [
+                          TextFormField(
+                            key: const ValueKey('password'),
+                            initialValue: _formData.password,
+                            onChanged: (password) =>
+                                _formData.password = password,
+                            validator: (_password) {
+                              final password = _password ?? '';
+                              if (password.length < 6) {
+                                return 'Senha deve ter no mínimo 6 caracteres.';
+                              }
+                              return null;
+                            },
+                            obscureText: _enableObscure,
+                            decoration: InputDecoration(
+                              icon: Icon(
+                                Icons.lock,
+                                color: Theme.of(context).primaryColor,
+                              ),
+                              hintText: "Senha",
+                              border: InputBorder.none,
+                            ),
                           ),
-                          suffixIcon: Icon(
-                            Icons.visibility,
-                            color: Theme.of(context).primaryColor,
+                          Positioned(
+                            right: 0,
+                            top: 1,
+                            child: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  _enableObscure = !_enableObscure;
+                                });
+                              },
+                              icon: const Icon(Icons.visibility),
+                              color: Theme.of(context).primaryColor,
+                            ),
                           ),
-                          hintText: "Senha",
-                          border: InputBorder.none,
-                        ),
+                        ],
                       ),
                     ),
                     RoundedButton(
@@ -150,10 +166,11 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (ctx) => SignUpPage(
-                                      onSubmit: widget.onSubmit,
-                                    )));
+                            Navigator.of(context)
+                                .pushReplacement(MaterialPageRoute(
+                                    builder: (ctx) => SignUpPage(
+                                          onSubmit: widget.onSubmit,
+                                        )));
                           },
                           child: Text(
                             'Cadastre-se',

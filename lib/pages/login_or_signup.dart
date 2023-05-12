@@ -93,7 +93,7 @@ class _LoginOrSignUpState extends State<LoginOrSignUp> {
                   size: size,
                   text: 'LOGIN',
                   press: () {
-                    Navigator.of(context).push(MaterialPageRoute(
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
                         builder: (ctx) => LoginPage(
                               onSubmit: _handleSubmit,
                             )));
@@ -103,7 +103,7 @@ class _LoginOrSignUpState extends State<LoginOrSignUp> {
                   size: size,
                   text: 'REGISTRAR',
                   press: () {
-                    Navigator.of(context).push(MaterialPageRoute(
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
                         builder: (ctx) => SignUpPage(
                               onSubmit: _handleSubmit,
                             )));
