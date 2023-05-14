@@ -1,16 +1,8 @@
-# projeto_chat
+# PROJETO CHAT ANDROID/IOS FLUTTER
 
-A new Flutter project.
+## Imagens ilustrativas:
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![WhatsApp Image 2023-05-13 at 09 55 32](https://github.com/MateusMaccos/chat_flutter/assets/75508372/498bb544-6e7f-4929-8624-9b9a5dd134dd)
+![WhatsApp Image 2023-05-13 at 09 55 33](https://github.com/MateusMaccos/chat_flutter/assets/75508372/19a4b7ca-daa4-426e-939c-d012b8923318)
+![WhatsApp Image 2023-05-13 at 09 55 31](https://github.com/MateusMaccos/chat_flutter/assets/75508372/07544483-7f8c-4ad0-b6e0-0973118c246f)
