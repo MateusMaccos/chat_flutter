@@ -74,7 +74,7 @@ class _LoginOrSignUpState extends State<LoginOrSignUp> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Bem vindo ao Chat',
+                  'Bem vindo ao',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
@@ -83,7 +83,7 @@ class _LoginOrSignUpState extends State<LoginOrSignUp> {
                   height: size.height * 0.03,
                 ),
                 SvgPicture.asset(
-                  'assets/icons/chat.svg',
+                  'assets/icons/inicio.svg',
                   height: size.height * 0.45,
                 ),
                 SizedBox(
