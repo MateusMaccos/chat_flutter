@@ -1,4 +1,15 @@
-# PROJETO CHAT ANDROID/IOS FLUTTER
+<h1 align="center">
+📱<br>Detalhes do Chat Virtual
+</h1>
+
+## 📚 Resumo
+
+> Este repositório é um projeto feito com a linguagem Dart utilizando o framework do Flutter e também usando o banco de dados do Firebase. Ele apresenta autenticação e gerenciamento de usuários com o Firestore e o Storage. Após se logar ou cadastrar você será direcionado à tela de chat onde todos os usuários podem se comunicar por essa vida. Todas as mensagens são salvas nos Firebase, o que faz todos terem acesso simultâneo a todas as mensagens. O projeto também utiliza Cloud Mensaging para enviar notificações em Push para todos os usuários, onde aparecerão na aba de notificações no canto superior direito.
+
+- Aplicativo para Android <img align="center" alt="Android" height="30" width="40" src="https://cdn-icons-png.flaticon.com/512/174/174836.png">
+
+
+---
 
 ## Imagens ilustrativas:
 
