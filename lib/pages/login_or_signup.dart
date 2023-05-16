@@ -93,7 +93,7 @@ class _LoginOrSignUpState extends State<LoginOrSignUp> {
                   size: size,
                   text: 'LOGIN',
                   press: () {
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    Navigator.of(context).push(MaterialPageRoute(
                         builder: (ctx) => LoginPage(
                               onSubmit: _handleSubmit,
                             )));
@@ -103,7 +103,7 @@ class _LoginOrSignUpState extends State<LoginOrSignUp> {
                   size: size,
                   text: 'REGISTRAR',
                   press: () {
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    Navigator.of(context).push(MaterialPageRoute(
                         builder: (ctx) => SignUpPage(
                               onSubmit: _handleSubmit,
                             )));
@@ -146,7 +146,7 @@ class RoundedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
-      child: Container(
+      child: SizedBox(
         height: size.height * 0.08,
         width: size.width * 0.8,
         child: ClipRRect(

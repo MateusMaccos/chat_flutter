@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:projeto_chat/pages/login_or_signup.dart';
-import 'package:projeto_chat/pages/signup_page.dart';
-
 import '../core/models/auth_form_data.dart';
 
 class LoginPage extends StatefulWidget {
@@ -33,7 +31,6 @@ class _LoginPageState extends State<LoginPage> {
       return _showError('Imagem não selecionada!');
     }
     widget.onSubmit(_formData);
-    Navigator.of(context).pop();
   }
 
   @override
@@ -166,11 +163,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.of(context)
-                                .pushReplacement(MaterialPageRoute(
-                                    builder: (ctx) => SignUpPage(
-                                          onSubmit: widget.onSubmit,
-                                        )));
+                            Navigator.of(context).pop();
                           },
                           child: Text(
                             'Cadastre-se',

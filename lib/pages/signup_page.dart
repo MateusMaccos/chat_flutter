@@ -37,7 +37,6 @@ class _SignUpPageState extends State<SignUpPage> {
       return _showError('Imagem não selecionada!');
     }
     widget.onSubmit(_formData);
-    Navigator.of(context).pop();
   }
 
   @override
@@ -190,11 +189,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.of(context)
-                                .pushReplacement(MaterialPageRoute(
-                                    builder: (ctx) => LoginPage(
-                                          onSubmit: widget.onSubmit,
-                                        )));
+                            Navigator.of(context).pop();
                           },
                           child: Text(
                             'Faça Login',
