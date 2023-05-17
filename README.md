@@ -11,7 +11,7 @@
 
 ---
 
-## Imagens ilustrativas:
+## Imagens do Aplicativo:
 
 # Tela Inicial
 ![WhatsApp Image 2023-05-15 at 23 15 14 (1)](https://github.com/MateusMaccos/chat_flutter/assets/75508372/e27ca094-6b3f-45a0-bcfa-b99c34652629)
